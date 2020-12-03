@@ -1,0 +1,597 @@
+# Déclaration des bibliothèques
+from getpass import getpass
+
+# Déclaration des variables, listes et string
+text = ''
+cmd = ""
+commandes = ["create", "modify", "delete", "shutdown", "read"]
+stop = "non"
+fold = 0
+fold1 = 0
+
+# Déclaration des fonctions utilisées
+def write(text):
+    textlist = []
+    for i in range(0,len(text)):
+        if text[i] == 'a':
+            textlist.append('b')
+        elif text[i] == 'b':
+            textlist.append('c')
+        elif text[i] == 'c':
+            textlist.append('d')
+        elif text[i] == 'd':
+            textlist.append('e')
+        elif text[i] == 'e':
+            textlist.append('f')
+        elif text[i] == 'f':
+            textlist.append('g')
+        elif text[i] == 'g':
+            textlist.append('h')
+        elif text[i] == 'h':
+            textlist.append('i')
+        elif text[i] == 'i':
+            textlist.append('j')
+        elif text[i] == 'j':
+            textlist.append('k')
+        elif text[i] == 'k':
+            textlist.append('l')
+        elif text[i] == 'l':
+            textlist.append('m')
+        elif text[i] == 'm':
+            textlist.append('n')
+        elif text[i] == 'n':
+            textlist.append('o')
+        elif text[i] == 'o':
+            textlist.append('p')
+        elif text[i] == 'p':
+            textlist.append('q')
+        elif text[i] == 'q':
+            textlist.append('r')
+        elif text[i] == 'r':
+            textlist.append('s')
+        elif text[i] == 's':
+            textlist.append('t')
+        elif text[i] == 't':
+            textlist.append('u')
+        elif text[i] == 'u':
+            textlist.append('v')
+        elif text[i] == 'v':
+            textlist.append('w')
+        elif text[i] == 'w':
+            textlist.append('x')
+        elif text[i] == 'x':
+            textlist.append('y')
+        elif text[i] == 'y':
+            textlist.append('z')
+        elif text[i] == 'z':
+            textlist.append('a')
+        elif text[i] == 'A':
+            textlist.append('B')
+        elif text[i] == 'B':
+            textlist.append('C')
+        elif text[i] == 'C':
+            textlist.append('D')
+        elif text[i] == 'D':
+            textlist.append('E')
+        elif text[i] == 'E':
+            textlist.append('F')
+        elif text[i] == 'F':
+            textlist.append('G')
+        elif text[i] == 'G':
+            textlist.append('H')
+        elif text[i] == 'H':
+            textlist.append('I')
+        elif text[i] == 'I':
+            textlist.append('J')
+        elif text[i] == 'J':
+            textlist.append('K')
+        elif text[i] == 'K':
+            textlist.append('L')
+        elif text[i] == 'L':
+            textlist.append('M')
+        elif text[i] == 'M':
+            textlist.append('N')
+        elif text[i] == 'N':
+            textlist.append('O')
+        elif text[i] == 'O':
+            textlist.append('P')
+        elif text[i] == 'P':
+            textlist.append('Q')
+        elif text[i] == 'Q':
+            textlist.append('R')
+        elif text[i] == 'R':
+            textlist.append('S')
+        elif text[i] == 'S':
+            textlist.append('T')
+        elif text[i] == 'T':
+            textlist.append('U')
+        elif text[i] == 'U':
+            textlist.append('V')
+        elif text[i] == 'V':
+            textlist.append('W')
+        elif text[i] == 'W':
+            textlist.append('X')
+        elif text[i] == 'X':
+            textlist.append('Y')
+        elif text[i] == 'Y':
+            textlist.append('Z')
+        elif text[i] == 'Z':
+            textlist.append('A')
+        else:
+            textlist.append(text[i])
+    text = "".join(textlist)
+    return(text)
+def read(text):
+    textlist = []
+    for i in range(0,len(text)):
+        if text[i] == 'b':
+            textlist.append('a')
+        elif text[i] == 'c':
+            textlist.append('b')
+        elif text[i] == 'd':
+            textlist.append('c')
+        elif text[i] == 'e':
+            textlist.append('d')
+        elif text[i] == 'f':
+            textlist.append('e')
+        elif text[i] == 'g':
+            textlist.append('f')
+        elif text[i] == 'h':
+            textlist.append('g')
+        elif text[i] == 'i':
+            textlist.append('h')
+        elif text[i] == 'j':
+            textlist.append('i')
+        elif text[i] == 'k':
+            textlist.append('j')
+        elif text[i] == 'l':
+            textlist.append('k')
+        elif text[i] == 'm':
+            textlist.append('l')
+        elif text[i] == 'n':
+            textlist.append('m')
+        elif text[i] == 'o':
+            textlist.append('n')
+        elif text[i] == 'p':
+            textlist.append('o')
+        elif text[i] == 'q':
+            textlist.append('p')
+        elif text[i] == 'r':
+            textlist.append('q')
+        elif text[i] == 's':
+            textlist.append('r')
+        elif text[i] == 't':
+            textlist.append('s')
+        elif text[i] == 'u':
+            textlist.append('t')
+        elif text[i] == 'v':
+            textlist.append('u')
+        elif text[i] == 'w':
+            textlist.append('v')
+        elif text[i] == 'x':
+            textlist.append('w')
+        elif text[i] == 'y':
+            textlist.append('x')
+        elif text[i] == 'z':
+            textlist.append('y')
+        elif text[i] == 'a':
+            textlist.append('z')
+        elif text[i] == 'B':
+            textlist.append('A')
+        elif text[i] == 'C':
+            textlist.append('B')
+        elif text[i] == 'D':
+            textlist.append('C')
+        elif text[i] == 'E':
+            textlist.append('D')
+        elif text[i] == 'F':
+            textlist.append('E')
+        elif text[i] == 'G':
+            textlist.append('F')
+        elif text[i] == 'H':
+            textlist.append('G')
+        elif text[i] == 'I':
+            textlist.append('H')
+        elif text[i] == 'J':
+            textlist.append('I')
+        elif text[i] == 'K':
+            textlist.append('J')
+        elif text[i] == 'L':
+            textlist.append('K')
+        elif text[i] == 'M':
+            textlist.append('L')
+        elif text[i] == 'N':
+            textlist.append('M')
+        elif text[i] == 'O':
+            textlist.append('N')
+        elif text[i] == 'P':
+            textlist.append('O')
+        elif text[i] == 'Q':
+            textlist.append('P')
+        elif text[i] == 'R':
+            textlist.append('Q')
+        elif text[i] == 'S':
+            textlist.append('R')
+        elif text[i] == 'T':
+            textlist.append('S')
+        elif text[i] == 'U':
+            textlist.append('T')
+        elif text[i] == 'V':
+            textlist.append('U')
+        elif text[i] == 'W':
+            textlist.append('V')
+        elif text[i] == 'X':
+            textlist.append('W')
+        elif text[i] == 'Y':
+            textlist.append('X')
+        elif text[i] == 'Z':
+            textlist.append('Y')
+        elif text[i] == 'A':
+            textlist.append('Z')
+        else:
+            textlist.append(text[i])
+    text = "".join(textlist)
+    return(text)
+def space():
+    for i in range(50):
+        i = i
+        print(" ")
+
+# lecture des fichiers de données
+Fo1 = open("data1.txt", "r")
+Fl1 = Fo1.readlines()
+Fl1 = len(Fl1)
+Fo1.close()
+Fo2 = open("data2.txt", "r")
+Fl2 = Fo2.readlines()
+Fl2 = len(Fl2)
+Fo2.close()
+Fo3 = open("data3.txt", "r")
+Fl3 = Fo3.readlines()
+Fl3 = len(Fl3)
+Fo3.close()
+
+# Début du programme
+while stop == "non":
+    space()
+    print(" ________________________")
+    print("|                        |")
+    print("|  créer :     create    |")
+    print("|  lire :      read      |")
+    print("|  modifier :  modify    |")
+    print("|  supprimer : delete    |")
+    print("|  éteindre :  shutdown  |")
+    print("|________________________|") # Affichage de l'interface
+    cmd = str(input("/> ")).replace(" ","") # Demande à l'utilisateur de taper une commande
+    
+    if not cmd in commandes: # Si la commande tapée n'est pas reconnue dans la liste 'commandes' ...
+        print("Commande Incorrecte !")
+        input("Entrée pour continuer...")
+    
+
+    elif cmd in commandes: 
+        if cmd == "create":
+            # créer un fichier
+            Fo1 = open("data1.txt", "r")
+            Fl1 = Fo1.readlines()
+            Fl1 = len(Fl1)
+            Fo1.close()
+            Fo2 = open("data2.txt", "r")
+            Fl2 = Fo2.readlines()
+            Fl2 = len(Fl2)
+            Fo2.close()
+            Fo3 = open("data3.txt", "r")
+            Fl3 = Fo3.readlines()
+            Fl3 = len(Fl3)
+            Fo3.close()
+            if Fl1 == 0:
+                print("Nom Du Fichier : ")
+                Fo1 = open("data1.txt", "a")
+                Fo1.write(str(input("- ")))
+                Fo1.write('\n')
+                print("Mot de Passe : ")
+                Fo1.write(str(write(str(getpass("- ")))))
+                Fo1.write('\n')
+                print("Contenu : ")
+                Fo1.write(str(write(str(input("- ")))))
+                Fo1.close()
+
+            elif Fl2 == 0:
+                print("Nom Du Fichier : ")
+                Fo2 = open("data2.txt", "a")
+                Fo2.write(str(input("- ")))
+                Fo2.write('\n')
+                print("Mot de Passe : ")
+                Fo2.write(str(write(str(getpass("- ")))))
+                Fo2.write('\n')
+                print("Contenu : ")
+                Fo2.write(str(write(str(input("- ")))))
+                Fo2.close()
+
+            elif Fl3 == 0:
+                print("Nom Du Fichier : ")
+                Fo3 = open("data3.txt", "a")
+                Fo3.write(str(input("- ")))
+                Fo3.write('\n')
+                print("Mot de Passe : ")
+                Fo3.write(str(write(str(getpass("- ")))))
+                Fo3.write('\n')
+                print("Contenu : ")
+                Fo3.write(str(write(str(input("- ")))))
+                Fo3.close()
+                
+
+            else:
+                print("Mémoire complete, veuillez supprimer un fichier")
+            input("Entrée pour continuer ...")
+        elif cmd == "modify":
+            # modifier un fichier
+            Fo1 = open("data1.txt", "r")
+            Fl1 = Fo1.readlines()
+            F1 = Fl1
+            Fl1 = len(Fl1)
+            Fo1.close()
+            Fo2 = open("data2.txt", "r")
+            Fl2 = Fo2.readlines()
+            F2 = Fl2
+            Fl2 = len(Fl2)
+            Fo2.close()
+            Fo3 = open("data3.txt", "r")
+            Fl3 = Fo3.readlines()
+            F3 = Fl3
+            Fl3 = len(Fl3)
+            Fo3.close()
+            fold = 0
+            if Fl1 != 0:
+                print(F1[0])
+                fold = 1
+            if Fl2 != 0:
+                print(F2[0])
+                fold = 1
+            if Fl3 != 0:
+                print(F3[0])
+                fold = 1
+            if fold == 0:
+                print("")
+                print("Mémoire Vide, Créez un fichier")
+                print("")
+            if fold == 1:
+                print("Choisissez un fichier :")
+                print("")
+                ex = 0
+                lect = str(input("- "))
+                if Fl1 > 0 and fold != 0:
+                    if lect == F1[0].replace("\n",""):
+                        ex = 1
+                        print("Mot De Passe :")
+                        mdp = write(str(getpass("- ")))
+                        if mdp == F1[1].replace("\n",""):
+                            print("Nouveau texte : (Entrée pour ne rien changer)")
+                            add = write(str(input()))
+                            if not add == "":
+                                Fo1 = open("data1.txt", "w")
+                                Fo1.write(F1[0])
+                                Fo1.write(F1[1])
+                                Fo1.write(add)
+                                Fo1.close()
+                                Fo1 = open("data1.txt", "r")
+                                print("")
+                                print("Le texte a été changé en", read(add))
+                                Fo1.close()
+                        
+                            else:
+                                print("Aucun Changement n'a été éffectué.")
+                        else:
+                            print("Mot De Passe Incorrect !")
+                if Fl2 > 0 and fold != 0:
+                    if lect == F2[0].replace("\n",""):
+                        ex = 1
+                        print("Mot De Passe :")
+                        mdp = write(str(getpass("- ")))
+                        if mdp == F2[1].replace("\n",""):
+                            print("Nouveau texte : (Entrée pour ne rien changer)")
+                            add = write(str(input()))
+                            if not add == "":
+                                Fo2 = open("data2.txt", "w")
+                                Fo2.write(F2[0])
+                                Fo2.write(F2[1])
+                                Fo2.write(add)
+                                Fo2.close()
+                                print("")
+                                print("Le texte a été changé en", read(add))
+
+                            else:
+                                print("Aucun Changement n'a été éffectué.")
+                        else:
+                            print("Mot De Passe Incorrect !")
+                if Fl3 > 0 and fold != 0:
+                    if lect == F3[0].replace("\n",""):
+                        ex = 1
+                        print("Mot De Passe :")
+                        mdp = write(str(getpass("- ")))
+                        if mdp == F3[1].replace("\n",""):
+                            print("Nouveau texte : (Entrée pour ne rien changer)")
+                            add = write(str(input()))
+                            if not add == "":
+                                Fo3 = open("data3.txt", "w")
+                                Fo3.write(F3[0])
+                                Fo3.write(F3[1])
+                                Fo3.write(add)
+                                Fo3.close()
+                                print("")
+                                print("Le texte a été changé en", read(add))
+                        
+                            else:
+                                print("Aucun Changement n'a été éffectué.")
+                        else:
+                            print("Mot De Passe Incorrect !")
+                if ex == 0 and fold != 0:
+                    print("fichier inexistant")
+                    Fo1.close()
+                    Fo2.close()
+                    Fo3.close()
+            input("Entrée pour continuer ...")
+        elif cmd == "read":
+            # lire un fichier
+            Fo1 = open("data1.txt", "r")
+            Fl1 = Fo1.readlines()
+            F1 = Fl1
+            Fl1 = len(Fl1)
+            Fo1.close()
+            Fo2 = open("data2.txt", "r")
+            Fl2 = Fo2.readlines()
+            F2 = Fl2
+            Fl2 = len(Fl2)
+            Fo2.close()
+            Fo3 = open("data3.txt", "r")
+            Fl3 = Fo3.readlines()
+            F3 = Fl3
+            Fl3 = len(Fl3)
+            Fo3.close()
+            fold = 0
+            if len(F1) > 0:
+                print(F1[0])
+                print("")
+                fold = 1
+            if len(F2) > 0:
+                print(F2[0])
+                print("")
+                fold = 1
+            if len(F3) > 0:
+                print(F3[0])
+                print("")
+                fold = 1
+            if fold == 0:
+                print("")
+                print("Mémoire Vide, Créez un fichier")
+                print("")
+                input("Entrée pour continuer...")
+                fold = 0
+            if fold == 1:
+                print("")
+                print("Choisissez un fichier :")
+                print("")
+                ex = 0
+                lect = str(input("- "))
+                if Fl1 > 0 and fold != 0:
+                    if lect == F1[0].replace("\n",""):
+                        ex = 1
+                        print("Mot De Passe :")
+                        print("")
+                        mdp = write(str(getpass("- ")))
+                        if mdp == F1[1].replace("\n",""):
+                            print(read(F1[2]))
+                            print("")
+                        else:
+                            print("Mot De Passe Incorrect !")
+                            print("")
+                if Fl2 > 0 and fold != 0:
+                    if lect == F2[0].replace("\n",""):
+                        ex = 1
+                        print("Mot De Passe :")
+                        print("")
+                        mdp = write(str(getpass("- ")))
+                        print("")
+                        if mdp == F2[1].replace("\n",""):
+                            print(read(F2[2]))
+                            print("")
+                        else:
+                            print("Mot De Passe Incorrect !")
+                if Fl3 > 0 and fold != 0:
+                    if lect == F3[0].replace("\n",""):
+                        ex = 1
+                        print("Mot De Passe :")
+                        mdp = write(str(getpass("- ")))
+                        if mdp == F3[1].replace("\n",""):
+                            print(read(F3[2]))
+                        else:
+                            print("Mot De Passe Incorrect !")
+                if ex == 0 and fold != 0:
+                    print("fichier inexistant")
+                input("Entrée pour continuer ...")
+        elif cmd == "delete":
+            # supprimer un fichier
+            Fo1 = open("data1.txt", "r")
+            Fl1 = Fo1.readlines()
+            F1 = Fl1
+            Fl1 = len(Fl1)
+            Fo1.close()
+            Fo2 = open("data2.txt", "r")
+            Fl2 = Fo2.readlines()
+            F2 = Fl2
+            Fl2 = len(Fl2)
+            Fo2.close()
+            Fo3 = open("data3.txt", "r")
+            Fl3 = Fo3.readlines()
+            F3 = Fl3
+            Fl3 = len(Fl3)
+            Fo3.close()
+            fold = 0
+            if len(F1) > 0:
+                print(F1[0])
+                print("")
+                fold = 1
+            if len(F2) > 0:
+                print(F2[0])
+                print("")
+                fold = 1
+            if len(F3) > 0:
+                print(F3[0])
+                print("")
+                fold = 1
+            if fold == 0:
+                print("")
+                print("Mémoire Vide, Créez un fichier")
+                print("")
+                input("Entrée pour continuer...")
+                fold = 0
+            if fold == 1:
+                print("")
+                print("Choisissez un fichier :")
+                print("")
+                ex = 0
+                lect = str(input("- "))
+                if Fl1 > 0 and fold != 0:
+                    if lect == F1[0].replace("\n",""):
+                        ex = 1
+                        print("Mot De Passe :")
+                        print("")
+                        mdp = write(str(getpass("- ")))
+                        if mdp == F1[1].replace("\n",""):
+                            Fo1 = open("data1.txt", "w")
+                            Fo1.close
+                        else:
+                            print("Mot De Passe Incorrect !")
+                if Fl2 > 0 and fold != 0:
+                    if lect == F2[0].replace("\n",""):
+                        ex = 1
+                        print("Mot De Passe :",'\n')
+                        mdp = write(str(getpass("- ")))
+                        if mdp == F2[1].replace("\n",""):
+                            Fo2 = open("data2.txt", "w")
+                            Fo2.close
+                        else:
+                            print("Mot De Passe Incorrect !")
+                if Fl3 > 0 and fold != 0:
+                    if lect == F3[0].replace("\n",""):
+                        ex = 1
+                        print("Mot De Passe :",'\n')
+                        mdp = write(str(getpass("- ")))
+                        if mdp == F3[1].replace("\n",""):
+                            Fo3 = open("data3.txt", "w")
+                            Fo3.close
+                        else:
+                            print("Mot De Passe Incorrect !",'\n')
+                if ex == 0 and fold != 0:
+                    print("Fichier inexistant")
+                input("Entrée pour continuer ...")
+        elif cmd == "shutdown":
+            stopans = ""
+            while not stopans in ["oui", "non"]:
+                print("Voulez vous éteindre ? ( oui / non )")
+                stopans = str(input("- "))
+                if stopans == "oui":
+                    print("Arret en cours")
+                    stop = "oui"
+                elif stopans != "non":
+                    print('\n',"réponse incorrecte !",'\n')
